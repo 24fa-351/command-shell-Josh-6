@@ -35,7 +35,7 @@ void handle_input(const char *input)
 {
     char buffer[1024];
     strncpy(buffer, replace_env_vars(input), sizeof(buffer) - 1);
-    buffer[sizeof(buffer) - 1] = '\0';
+    buffer[sizeof(buffer) - 1] = '\0'; // Ensure null termination
 
     char *args[100];
     char *token = strtok(buffer, " ");
